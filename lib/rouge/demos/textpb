@@ -1,0 +1,16 @@
+name: 'webserver'
+host: "localhost"
+description: "The description here.\nMay contain multiple lines"
+port: 8080
+
+# Cache configuration
+cache {
+  enabled: true
+  options {
+    [memcached.MemcachedCacheConfig] {
+      host: 'foobar'  # Host
+      port: 8903  # Port
+      eviction: LRU
+    }
+  }
+}
